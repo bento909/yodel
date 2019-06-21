@@ -31,7 +31,7 @@ public class Main {
     private static String calculateInterestOn(final String inputArgument) {
         final BigDecimal amount = InputTranslator.translate(inputArgument);
         if(amount.compareTo(BigDecimal.ZERO) > 0)
-            return inputArgument + " yields" + Calculator.calculateInterest(amount).toString() + " interest.";
+            return inputArgument + " yields " + Calculator.calculateInterest(amount).toString() + " interest.";
         return ("Input of " + inputArgument + " could not be processed.");
     }
 

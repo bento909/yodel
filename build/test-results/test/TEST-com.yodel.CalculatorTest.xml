@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.yodel.CalculatorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-06-21T11:28:08" hostname="Bento-PC" time="0.008">
+<testsuite name="com.yodel.CalculatorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-06-21T11:29:28" hostname="Bento-PC" time="0.008">
   <properties/>
   <testcase name="willFindThatZeroGainsInterestOfZero" classname="com.yodel.CalculatorTest" time="0.006"/>
-  <testcase name="willFindThat4500GainsInInterestOf80" classname="com.yodel.CalculatorTest" time="0.0"/>
+  <testcase name="willFindThat4500GainsInInterestOf80" classname="com.yodel.CalculatorTest" time="0.001"/>
   <testcase name="willFindThat100GainsInInterestOf1" classname="com.yodel.CalculatorTest" time="0.0"/>
-  <testcase name="willFindThatNullReturnsInterestOfZero" classname="com.yodel.CalculatorTest" time="0.0"/>
+  <testcase name="willFindThatNullReturnsInterestOfZero" classname="com.yodel.CalculatorTest" time="0.001"/>
   <testcase name="willFindThatNegativeGainsInterestOfZero" classname="com.yodel.CalculatorTest" time="0.0"/>
   <testcase name="willFindThat6400GainsAnInterestOf132" classname="com.yodel.CalculatorTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
