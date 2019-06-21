@@ -13,43 +13,41 @@ public class Calculator {
     private static final BigDecimal INTEREST_OVER_FIVE_THOUSAND = new BigDecimal(0.03);
 
     /**
-     *     Interest Calculation
-     *
-     *     Write a program that will output the total interest gained on a sum of money
-     *
+     * Interest Calculation
+     * <p>
+     * Write a program that will output the total interest gained on a sum of money
+     * <p>
      * 1) The first 1000 gains 1% interest
      * 2) Between 1000 and 5000 gains 2% interest
      * 3) Anything greater than 5000 gains 3% interest
-     *
-     *             Example
+     * <p>
+     * Example
      * 6400 would gain an interest of 132
-     *
-     *     Please submit your solution and tests in a zipfile or provide a link to a repository such as github.
+     * <p>
+     * Please submit your solution and tests in a zipfile or provide a link to a repository such as github.
      */
     static BigDecimal calculateInterest(final BigDecimal sumOfMoney) {
         if (notValid(sumOfMoney))
             return inMoneyFormat(BigDecimal.ZERO);
-        final boolean isMoneyOverFiveThousand = (sumOfMoney.compareTo(FIVE_THOUSAND) > 0);
-        final boolean isMoneyOverOneThousand = (sumOfMoney.compareTo(THOUSAND) > 0);
-        if (isMoneyOverFiveThousand) {
+        if (sumOfMoney.compareTo(FIVE_THOUSAND) > 0)
             return calculate(THOUSAND, FIVE_THOUSAND.subtract(THOUSAND), sumOfMoney.subtract(FIVE_THOUSAND));
-        } else if (isMoneyOverOneThousand) {
-            return calculate(THOUSAND, sumOfMoney.subtract(THOUSAND));
-        } else {
-            return calculate(sumOfMoney);
-        }
+        return calculate(sumOfMoney);
     }
 
     private static boolean notValid(final BigDecimal sumOfMoney) {
         return (Objects.equals(null, sumOfMoney) || sumOfMoney.compareTo(BigDecimal.ZERO) < 0);
     }
 
-    private static BigDecimal calculate(final BigDecimal firstOneThousand) {
-        return calculate(firstOneThousand, BigDecimal.ZERO, BigDecimal.ZERO);
+    private static BigDecimal calculate(final BigDecimal amount) {
+        if (amount.compareTo(THOUSAND) > 0) {
+            return calculate(THOUSAND, amount.subtract(THOUSAND), BigDecimal.ZERO);
+        } else {
+            return calculate(amount, BigDecimal.ZERO, BigDecimal.ZERO);
+        }
     }
 
-    private static BigDecimal calculate(final BigDecimal firstOneThousand, final BigDecimal between0neAndFiveThousand) {
-           return calculate(THOUSAND, between0neAndFiveThousand, BigDecimal.ZERO);
+    private static BigDecimal calculate(BigDecimal firstOneThousand, final BigDecimal between0neAndFiveThousand) {
+        return calculate(THOUSAND, between0neAndFiveThousand, BigDecimal.ZERO);
     }
 
     private static BigDecimal calculate(final BigDecimal firstOneThousand,
@@ -61,7 +59,7 @@ public class Calculator {
                 .setScale(2, RoundingMode.HALF_UP);
     }
 
-    private static BigDecimal inMoneyFormat(final BigDecimal bigDecimal){
+    private static BigDecimal inMoneyFormat(final BigDecimal bigDecimal) {
         return bigDecimal.setScale(2, RoundingMode.HALF_UP);
     }
 

@@ -8,21 +8,18 @@ import java.util.Arrays;
 public class Main {
 
     public static void main (String[] args){
-        DateTime start = DateTime.now();
+        long start = DateTime.now().getMillis();
         Arrays.stream(args).forEach(arg -> {
             System.out.println(TranslateIfPossible(arg));
-
         });
-
-
-        BigDecimal input = InputTranslator.translate();
+        long end = DateTime.now().getMillis() - start;
+        System.out.println("Completed in " + end + "ms");
     }
 
     private static String TranslateIfPossible(final String inputArgument) {
         BigDecimal input = InputTranslator.translate(inputArgument);
-        BigDecimal interest = Calculator.calculateInterest(input);
-        return
-    };
-
-
+        if(input.compareTo(BigDecimal.ZERO) > 0)
+            return inputArgument + " yields " + Calculator.calculateInterest(input).toString();
+        return "Input of " + inputArgument + " could not be processed.";
+    }
 }
