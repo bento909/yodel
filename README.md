@@ -1,4 +1,4 @@
-# yodel
+# yodel - Ben Thomas code exercise for interview process
 
 ## TO BUILD:
     Use the command "gradlew build" on command line in the working directory of the project
