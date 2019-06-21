@@ -14,4 +14,5 @@ public class InputValidator {
         boolean isNegative = input.startsWith("-");
         return isNumber && !isNegative;
     }
+
 }

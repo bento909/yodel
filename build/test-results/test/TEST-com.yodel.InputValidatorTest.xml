@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.yodel.InputValidatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-06-21T11:16:50" hostname="Bento-PC" time="0.016">
+<testsuite name="com.yodel.InputValidatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-06-21T11:28:08" hostname="Bento-PC" time="0.011">
   <properties/>
-  <testcase name="willFindBigNumberIsValid" classname="com.yodel.InputValidatorTest" time="0.016"/>
+  <testcase name="willFindBigNumberIsValid" classname="com.yodel.InputValidatorTest" time="0.01"/>
   <testcase name="willFindNegative1IsInvalid" classname="com.yodel.InputValidatorTest" time="0.0"/>
   <testcase name="willFindMalformedNumberIsInvalid" classname="com.yodel.InputValidatorTest" time="0.0"/>
   <testcase name="willFindAlphaNumberIsInvalid" classname="com.yodel.InputValidatorTest" time="0.0"/>

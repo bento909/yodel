@@ -22,4 +22,5 @@ class InputTranslator {
     private static BigDecimal translateValidInput(String input) throws NumberFormatException {
         return new BigDecimal(input);
     }
+
 }
